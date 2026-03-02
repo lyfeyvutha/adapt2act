@@ -91,7 +91,7 @@ def rollout(cfg):
             print(f'wandb link: {wandb.run.get_url()}')
             wandb_instance = wandb
         except:
-            print(colored('Warning: failed to init wandb. Logs will be saved locally.', 'yellow'), attrs=['bold'])
+            print(colored('Warning: failed to init wandb. Logs will be saved locally.', 'yellow', attrs=['bold']))
             wandb_instance = None
 
     num_frames = 9 if cfg.plan_is_conditioning_animatediff else 8

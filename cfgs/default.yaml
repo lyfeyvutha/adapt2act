@@ -40,9 +40,9 @@ mlp_dim: 512
 latent_dim: 50
 
 # wandb (insert your own)
-use_wandb: False
+use_wandb: True
 wandb_project: videoadapt_test
-wandb_entity: "[YOUR WANDB ENTITY]"
+wandb_entity: "lyfeyvutha-brown-university"
 
 # misc
 seed: 1 

@@ -34,3 +34,5 @@ jupyter
 triton
 peft==0.12.0
 git+https://github.com/Farama-Foundation/Metaworld.git@18118a28c06893da0f363786696cc792457b062b
+mujoco==2.3.1
+mujoco.py==2.3.2.14
