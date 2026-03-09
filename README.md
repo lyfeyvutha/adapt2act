@@ -333,6 +333,117 @@ for step in tqdm(range(num_training_steps)):
     idm_optimizer.step()
 ```
 
+## IDM Data Collection and Comparison Pipeline (MetaWorld)
+
+This repository now includes a reproducible IDM pipeline:
+1. collect trajectories,
+2. build mixed IDM datasets,
+3. train multiple IDM checkpoints,
+4. evaluate checkpoints with `src/visual_planning.py`,
+5. aggregate mean/std success metrics across seeds.
+
+### 1) Collect IDM trajectories
+
+Use `expert`, `random`, or `agent_ckpt` policy sources.
+
+```shell
+python src/collect_idm_data.py \
+    --tasks metaworld-door-close,metaworld-drawer-open \
+    --policy-source expert \
+    --goal-mode hidden \
+    --num-episodes 100 \
+    --seed 0 \
+    --output-dir idm_data/raw
+```
+
+Output layout:
+```text
+idm_data/raw/<task>/<source>/seed<seed>/episodes/episode_00000.npz
+```
+
+### 2) Build mixed datasets
+
+Example: fixed counts per task.
+
+```shell
+python src/build_idm_dataset.py \
+    --input-root idm_data/raw \
+    --dataset-name mw_mix_close_drawer_50_50 \
+    --tasks metaworld-door-close,metaworld-drawer-open \
+    --counts-per-task metaworld-door-close:50,metaworld-drawer-open:50 \
+    --success-filter all \
+    --seed 0
+```
+
+Alternative: weighted ratios + total trajectories.
+
+```shell
+python src/build_idm_dataset.py \
+    --input-root idm_data/raw \
+    --dataset-name mw_mix_ratio \
+    --tasks metaworld-door-close,metaworld-drawer-open \
+    --mix-ratios metaworld-door-close:0.75,metaworld-drawer-open:0.25 \
+    --total-trajectories 200 \
+    --success-filter success_only \
+    --seed 0
+```
+
+Outputs:
+```text
+idm_data/processed/<dataset_name>/train.npz
+idm_data/processed/<dataset_name>/val.npz
+idm_data/processed/<dataset_name>/manifest.json
+```
+
+### 3) Train IDM checkpoints
+
+```shell
+python src/train_idm.py \
+    --dataset-dir idm_data/processed/mw_mix_close_drawer_50_50 \
+    --experiment-name mix_ablation \
+    --seed 0 \
+    --num-steps 50000 \
+    --batch-size 256
+```
+
+Checkpoint format is planner-compatible and includes `inv_model`:
+```text
+checkpoints/idm/<experiment_name>/idm_<dataset_name>_seed<seed>.ckpt
+```
+
+### 4) Evaluate multiple IDM checkpoints with visual planning
+
+`src/visual_planning.py` now prints:
+```text
+[RESULT] avg_episode_reward=... avg_success_rate=...
+```
+
+Run sweep:
+
+```shell
+python src/eval_idm_checkpoints.py \
+    --ckpt-glob "checkpoints/idm/mix_ablation/*.ckpt" \
+    --task metaworld-door-close \
+    --text-prompt "a robot arm closing a door" \
+    --seeds 0,1,2 \
+    --plan-with-probadap \
+    --prior-strength 0.1 \
+    --output-csv idm_eval/results.csv \
+    --output-json idm_eval/summary.json
+```
+
+### 5) Recommended ablation grid
+
+- trajectories per task: `25, 50, 100, 200`
+- mix ratios (target:aux): `100:0`, `75:25`, `50:50`
+- quality filter: `all`, `success_only`
+- seeds: `0, 1, 2`
+
+Config templates are provided in:
+- `cfgs/idm/collect_default.yaml`
+- `cfgs/idm/mix_default.yaml`
+- `cfgs/idm/train_default.yaml`
+
 ## Citation
 If you find this repository helpful, please consider citing our work:
 ```bibtex

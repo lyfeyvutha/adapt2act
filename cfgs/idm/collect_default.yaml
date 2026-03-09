@@ -1,0 +1,12 @@
+tasks: metaworld-door-close
+num_episodes: 100
+policy_source: expert
+agent_ckpt_path: ""
+goal_mode: hidden
+seed: 0
+action_repeat: 1
+episode_length: 200
+render_size: 512
+camera_id: 0
+output_dir: idm_data/raw
+overwrite: false

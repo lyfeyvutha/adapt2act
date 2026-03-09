@@ -165,8 +165,12 @@ def rollout(cfg):
         print(f'Rollout {rollout_idx} completed successfully')
 
 
+    avg_episode_reward = float(np.mean(episode_returns)) if episode_returns else 0.0
+    avg_success_rate = float(np.mean(episode_success_flags)) if episode_success_flags else 0.0
+    print(f"[RESULT] avg_episode_reward={avg_episode_reward:.6f} avg_success_rate={avg_success_rate:.6f}")
+
     if wandb_instance:
-        wandb_instance.log({'avg_episode_reward': np.mean(episode_returns), 'avg_success_rate': np.mean(episode_success_flags)})
+        wandb_instance.log({'avg_episode_reward': avg_episode_reward, 'avg_success_rate': avg_success_rate})
 
 
 
