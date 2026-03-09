@@ -1,0 +1,14 @@
+dataset_dir: idm_data/processed/mw_mix_default
+experiment_name: default
+seed: 0
+batch_size: 256
+val_batch_size: 256
+num_steps: 50000
+eval_every: 1000
+save_every: 5000
+lr: 1e-4
+weight_decay: 0.0
+grad_clip: 1.0
+num_workers: 4
+device: cuda
+output_root: checkpoints/idm

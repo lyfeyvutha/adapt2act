@@ -1,0 +1,18 @@
+input_root: idm_data/raw
+dataset_name: mw_mix_default
+output_root: idm_data/processed
+tasks: metaworld-door-close
+sources: expert,random,agent_ckpt
+seed: 0
+success_filter: all
+
+# Choose one strategy:
+# 1) Explicit counts per task (task:count)
+counts_per_task: ""
+# 2) Weighted ratios + total trajectories (task:ratio)
+mix_ratios: ""
+total_trajectories: 0
+# 3) Fallback: fixed count for each task if above are empty
+default_trajectories_per_task: 100
+
+val_ratio: 0.1
