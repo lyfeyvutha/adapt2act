@@ -1,11 +1,12 @@
 #!/bin/bash
-#SBATCH --job-name=merge-idm-eval
+#SBATCH --job-name=daddy
 #SBATCH --partition=gpus
 #SBATCH --nodelist=gpu2301
 #SBATCH --reservation=cvutha_res
-#SBATCH --time=00:30:00
-#SBATCH --mem=8G
-#SBATCH --cpus-per-task=1
+#SBATCH --gres=gpu:1
+#SBATCH --time=5689:56:89
+#SBATCH --mem=32G
+#SBATCH --cpus-per-task=2
 #SBATCH --output=runs/ours/logs/%x_%j.out
 #SBATCH --error=runs/ours/logs/%x_%j.err
 

@@ -1,9 +1,10 @@
 #!/bin/bash
-#SBATCH --job-name=eval-m3-idm
+#SBATCH --job-name=final-proj
 #SBATCH --partition=gpus
+#SBATCH --nodelist=gpu2501
 #SBATCH --gres=gpu:1
-#SBATCH --time=72:00:00
-#SBATCH --mem=64G
+#SBATCH --time=5689:56:89
+#SBATCH --mem=32G
 #SBATCH --cpus-per-task=2
 #SBATCH --array=0-5
 #SBATCH --output=runs/ours/logs/%x_%A_%a.out
