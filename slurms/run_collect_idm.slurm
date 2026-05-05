@@ -1,7 +1,7 @@
 #!/bin/bash
-#SBATCH --job-name=chen-collect-idm-mw
+#SBATCH --job-name=collect-idm-mw
 #SBATCH --partition=gpus
-#SBATCH --nodelist=gpu2301
+#SBATCH --nodelist=gpu2501
 #SBATCH --gres=gpu:1
 #SBATCH --time=24:00:00
 #SBATCH --mem=32G
@@ -22,4 +22,4 @@ python src/collect_idm_data.py \
   --goal-mode hidden \
   --num-episodes 100 \
   --seed 0 \
-  --output-dir idm_data/raw
+  --output-dir /cs/data/people/cvutha/idm_data/raw
