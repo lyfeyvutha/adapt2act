@@ -1,0 +1,14 @@
+{
+  "source_dataset_dir": "/cs/data/people/cvutha/idm_data/processed/mw_equal_50_50",
+  "embeddings": [
+    "vc-1"
+  ],
+  "embedding_dims": [
+    768
+  ],
+  "feature_dim": 768,
+  "splits": [
+    "train",
+    "val"
+  ]
+}

@@ -1,0 +1,307 @@
+checkpoint,seed,return_code,avg_episode_reward,avg_success_rate,parsed_result,stdout_log,stderr_log,command_log,stdout_tail,stderr_tail
+checkpoints/idm/milestone3_vgg-t/idm_mw_equal_50_50_vgg-t_seed0_best.ckpt,0,1,nan,nan,False,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_vgg-t_run_logs/idm_mw_equal_50_50_vgg-t_seed0_best_seed0.stdout.log,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_vgg-t_run_logs/idm_mw_equal_50_50_vgg-t_seed0_best_seed0.stderr.log,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_vgg-t_run_logs/idm_mw_equal_50_50_vgg-t_seed0_best_seed0.command.txt,,"Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+libEGL warning: failed to open /dev/dri/renderD131: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD131: Permission denied
+
+libEGL warning: failed to open /dev/dri/card4: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD130: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD130: Permission denied
+
+libEGL warning: failed to open /dev/dri/card3: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD129: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD129: Permission denied
+
+libEGL warning: failed to open /dev/dri/card2: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD128: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD128: Permission denied
+
+libEGL warning: failed to open /dev/dri/card1: Permission denied
+
+Traceback (most recent call last):
+  File ""/home/cvutha/adapt2act/src/visual_planning.py"", line 192, in <module>
+    rollout(parse_cfg(Path().cwd() / __CONFIG__))
+  File ""/home/cvutha/adapt2act/src/visual_planning.py"", line 28, in rollout
+    assert torch.cuda.is_available()
+AssertionError
+"
+checkpoints/idm/milestone3_vgg-t/idm_mw_equal_50_50_vgg-t_seed0_best.ckpt,1,1,nan,nan,False,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_vgg-t_run_logs/idm_mw_equal_50_50_vgg-t_seed0_best_seed1.stdout.log,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_vgg-t_run_logs/idm_mw_equal_50_50_vgg-t_seed0_best_seed1.stderr.log,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_vgg-t_run_logs/idm_mw_equal_50_50_vgg-t_seed0_best_seed1.command.txt,,"Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+libEGL warning: failed to open /dev/dri/renderD131: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD131: Permission denied
+
+libEGL warning: failed to open /dev/dri/card4: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD130: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD130: Permission denied
+
+libEGL warning: failed to open /dev/dri/card3: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD129: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD129: Permission denied
+
+libEGL warning: failed to open /dev/dri/card2: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD128: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD128: Permission denied
+
+libEGL warning: failed to open /dev/dri/card1: Permission denied
+
+Traceback (most recent call last):
+  File ""/home/cvutha/adapt2act/src/visual_planning.py"", line 192, in <module>
+    rollout(parse_cfg(Path().cwd() / __CONFIG__))
+  File ""/home/cvutha/adapt2act/src/visual_planning.py"", line 28, in rollout
+    assert torch.cuda.is_available()
+AssertionError
+"
+checkpoints/idm/milestone3_vgg-t/idm_mw_equal_50_50_vgg-t_seed0_best.ckpt,2,1,nan,nan,False,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_vgg-t_run_logs/idm_mw_equal_50_50_vgg-t_seed0_best_seed2.stdout.log,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_vgg-t_run_logs/idm_mw_equal_50_50_vgg-t_seed0_best_seed2.stderr.log,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_vgg-t_run_logs/idm_mw_equal_50_50_vgg-t_seed0_best_seed2.command.txt,,"Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+libEGL warning: failed to open /dev/dri/renderD131: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD131: Permission denied
+
+libEGL warning: failed to open /dev/dri/card4: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD130: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD130: Permission denied
+
+libEGL warning: failed to open /dev/dri/card3: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD129: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD129: Permission denied
+
+libEGL warning: failed to open /dev/dri/card2: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD128: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD128: Permission denied
+
+libEGL warning: failed to open /dev/dri/card1: Permission denied
+
+Traceback (most recent call last):
+  File ""/home/cvutha/adapt2act/src/visual_planning.py"", line 192, in <module>
+    rollout(parse_cfg(Path().cwd() / __CONFIG__))
+  File ""/home/cvutha/adapt2act/src/visual_planning.py"", line 28, in rollout
+    assert torch.cuda.is_available()
+AssertionError
+"
+checkpoints/idm/milestone3_vgg-t/idm_mw_equal_50_50_vgg-t_seed1_best.ckpt,0,1,nan,nan,False,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_vgg-t_run_logs/idm_mw_equal_50_50_vgg-t_seed1_best_seed0.stdout.log,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_vgg-t_run_logs/idm_mw_equal_50_50_vgg-t_seed1_best_seed0.stderr.log,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_vgg-t_run_logs/idm_mw_equal_50_50_vgg-t_seed1_best_seed0.command.txt,,"Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+libEGL warning: failed to open /dev/dri/renderD131: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD131: Permission denied
+
+libEGL warning: failed to open /dev/dri/card4: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD130: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD130: Permission denied
+
+libEGL warning: failed to open /dev/dri/card3: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD129: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD129: Permission denied
+
+libEGL warning: failed to open /dev/dri/card2: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD128: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD128: Permission denied
+
+libEGL warning: failed to open /dev/dri/card1: Permission denied
+
+Traceback (most recent call last):
+  File ""/home/cvutha/adapt2act/src/visual_planning.py"", line 192, in <module>
+    rollout(parse_cfg(Path().cwd() / __CONFIG__))
+  File ""/home/cvutha/adapt2act/src/visual_planning.py"", line 28, in rollout
+    assert torch.cuda.is_available()
+AssertionError
+"
+checkpoints/idm/milestone3_vgg-t/idm_mw_equal_50_50_vgg-t_seed1_best.ckpt,1,1,nan,nan,False,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_vgg-t_run_logs/idm_mw_equal_50_50_vgg-t_seed1_best_seed1.stdout.log,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_vgg-t_run_logs/idm_mw_equal_50_50_vgg-t_seed1_best_seed1.stderr.log,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_vgg-t_run_logs/idm_mw_equal_50_50_vgg-t_seed1_best_seed1.command.txt,,"Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+libEGL warning: failed to open /dev/dri/renderD131: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD131: Permission denied
+
+libEGL warning: failed to open /dev/dri/card4: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD130: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD130: Permission denied
+
+libEGL warning: failed to open /dev/dri/card3: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD129: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD129: Permission denied
+
+libEGL warning: failed to open /dev/dri/card2: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD128: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD128: Permission denied
+
+libEGL warning: failed to open /dev/dri/card1: Permission denied
+
+Traceback (most recent call last):
+  File ""/home/cvutha/adapt2act/src/visual_planning.py"", line 192, in <module>
+    rollout(parse_cfg(Path().cwd() / __CONFIG__))
+  File ""/home/cvutha/adapt2act/src/visual_planning.py"", line 28, in rollout
+    assert torch.cuda.is_available()
+AssertionError
+"
+checkpoints/idm/milestone3_vgg-t/idm_mw_equal_50_50_vgg-t_seed1_best.ckpt,2,1,nan,nan,False,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_vgg-t_run_logs/idm_mw_equal_50_50_vgg-t_seed1_best_seed2.stdout.log,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_vgg-t_run_logs/idm_mw_equal_50_50_vgg-t_seed1_best_seed2.stderr.log,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_vgg-t_run_logs/idm_mw_equal_50_50_vgg-t_seed1_best_seed2.command.txt,,"Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+libEGL warning: failed to open /dev/dri/renderD131: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD131: Permission denied
+
+libEGL warning: failed to open /dev/dri/card4: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD130: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD130: Permission denied
+
+libEGL warning: failed to open /dev/dri/card3: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD129: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD129: Permission denied
+
+libEGL warning: failed to open /dev/dri/card2: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD128: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD128: Permission denied
+
+libEGL warning: failed to open /dev/dri/card1: Permission denied
+
+Traceback (most recent call last):
+  File ""/home/cvutha/adapt2act/src/visual_planning.py"", line 192, in <module>
+    rollout(parse_cfg(Path().cwd() / __CONFIG__))
+  File ""/home/cvutha/adapt2act/src/visual_planning.py"", line 28, in rollout
+    assert torch.cuda.is_available()
+AssertionError
+"
+checkpoints/idm/milestone3_vgg-t/idm_mw_equal_50_50_vgg-t_seed2_best.ckpt,0,1,nan,nan,False,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_vgg-t_run_logs/idm_mw_equal_50_50_vgg-t_seed2_best_seed0.stdout.log,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_vgg-t_run_logs/idm_mw_equal_50_50_vgg-t_seed2_best_seed0.stderr.log,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_vgg-t_run_logs/idm_mw_equal_50_50_vgg-t_seed2_best_seed0.command.txt,,"Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+libEGL warning: failed to open /dev/dri/renderD131: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD131: Permission denied
+
+libEGL warning: failed to open /dev/dri/card4: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD130: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD130: Permission denied
+
+libEGL warning: failed to open /dev/dri/card3: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD129: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD129: Permission denied
+
+libEGL warning: failed to open /dev/dri/card2: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD128: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD128: Permission denied
+
+libEGL warning: failed to open /dev/dri/card1: Permission denied
+
+Traceback (most recent call last):
+  File ""/home/cvutha/adapt2act/src/visual_planning.py"", line 192, in <module>
+    rollout(parse_cfg(Path().cwd() / __CONFIG__))
+  File ""/home/cvutha/adapt2act/src/visual_planning.py"", line 28, in rollout
+    assert torch.cuda.is_available()
+AssertionError
+"
+checkpoints/idm/milestone3_vgg-t/idm_mw_equal_50_50_vgg-t_seed2_best.ckpt,1,1,nan,nan,False,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_vgg-t_run_logs/idm_mw_equal_50_50_vgg-t_seed2_best_seed1.stdout.log,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_vgg-t_run_logs/idm_mw_equal_50_50_vgg-t_seed2_best_seed1.stderr.log,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_vgg-t_run_logs/idm_mw_equal_50_50_vgg-t_seed2_best_seed1.command.txt,,"Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+libEGL warning: failed to open /dev/dri/renderD131: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD131: Permission denied
+
+libEGL warning: failed to open /dev/dri/card4: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD130: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD130: Permission denied
+
+libEGL warning: failed to open /dev/dri/card3: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD129: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD129: Permission denied
+
+libEGL warning: failed to open /dev/dri/card2: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD128: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD128: Permission denied
+
+libEGL warning: failed to open /dev/dri/card1: Permission denied
+
+Traceback (most recent call last):
+  File ""/home/cvutha/adapt2act/src/visual_planning.py"", line 192, in <module>
+    rollout(parse_cfg(Path().cwd() / __CONFIG__))
+  File ""/home/cvutha/adapt2act/src/visual_planning.py"", line 28, in rollout
+    assert torch.cuda.is_available()
+AssertionError
+"
+checkpoints/idm/milestone3_vgg-t/idm_mw_equal_50_50_vgg-t_seed2_best.ckpt,2,1,nan,nan,False,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_vgg-t_run_logs/idm_mw_equal_50_50_vgg-t_seed2_best_seed2.stdout.log,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_vgg-t_run_logs/idm_mw_equal_50_50_vgg-t_seed2_best_seed2.stderr.log,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_vgg-t_run_logs/idm_mw_equal_50_50_vgg-t_seed2_best_seed2.command.txt,,"Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+libEGL warning: failed to open /dev/dri/renderD131: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD131: Permission denied
+
+libEGL warning: failed to open /dev/dri/card4: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD130: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD130: Permission denied
+
+libEGL warning: failed to open /dev/dri/card3: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD129: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD129: Permission denied
+
+libEGL warning: failed to open /dev/dri/card2: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD128: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD128: Permission denied
+
+libEGL warning: failed to open /dev/dri/card1: Permission denied
+
+Traceback (most recent call last):
+  File ""/home/cvutha/adapt2act/src/visual_planning.py"", line 192, in <module>
+    rollout(parse_cfg(Path().cwd() / __CONFIG__))
+  File ""/home/cvutha/adapt2act/src/visual_planning.py"", line 28, in rollout
+    assert torch.cuda.is_available()
+AssertionError
+"

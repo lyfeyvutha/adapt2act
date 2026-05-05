@@ -1,0 +1,12 @@
+[INFO] loading animatediff...
+[INFO] loaded animatediff!
+[INFO] loading in-domain checkpoint...
+loading from version 0.0
+[INFO] loaded in-domain checkpoint!
+[INFO] loading inverse dynamics model checkpoint...
+[INFO] loaded inverse dynamics model checkpoint!
+Rollout 0 completed successfully
+Rollout 1 completed successfully
+Rollout 2 completed successfully
+[RESULT] avg_episode_reward=1923.731173 avg_success_rate=0.000000
+Found 8 GPUs for rendering. Using device 1.

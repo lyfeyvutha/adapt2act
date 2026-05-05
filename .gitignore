@@ -1,0 +1,41 @@
+# Large generated data
+idm_data/raw/**
+idm_data/processed/**/*.npz
+idm_data/features/**/*.npz
+
+# Keep small metadata that documents milestone datasets/features.
+!idm_data/raw/
+!idm_data/raw/_summaries/
+!idm_data/raw/_summaries/*.json
+!idm_data/processed/
+!idm_data/processed/**/
+!idm_data/processed/**/manifest.json
+!idm_data/features/
+!idm_data/features/**/
+!idm_data/features/**/feature_metadata.json
+
+# Symlink back to the code repo; keep code/configs in /home/cvutha/adapt2act.
+cfgs
+
+# Model weights/checkpoints. Keep only tiny IDM metrics JSON files as evidence.
+checkpoints/**
+!checkpoints/
+!checkpoints/idm/
+!checkpoints/idm/**/
+!checkpoints/idm/**/*_metrics.json
+
+# Large/noisy runtime logs
+logs/
+*.out
+*.err
+
+# Separate nested repo, not part of this push.
+adapt2act-data/
+
+# Keep milestone evaluation summaries and run commands.
+!idm_eval/
+!idm_eval/**/
+!idm_eval/**/*.csv
+!idm_eval/**/*.json
+!idm_eval/**/*.md
+!idm_eval/**/*.command.txt

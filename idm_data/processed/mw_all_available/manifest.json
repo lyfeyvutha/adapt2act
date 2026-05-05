@@ -1,0 +1,33 @@
+{
+  "dataset_name": "mw_all_available",
+  "input_root": "/cs/data/people/cvutha/idm_data/raw",
+  "seed": 0,
+  "tasks": [
+    "metaworld-door-close",
+    "metaworld-drawer-open"
+  ],
+  "sources": [
+    "expert"
+  ],
+  "success_filter": "all",
+  "available_episodes_per_task": {
+    "metaworld-door-close": 0,
+    "metaworld-drawer-open": 0
+  },
+  "selected_episodes_per_task": {
+    "metaworld-door-close": 0,
+    "metaworld-drawer-open": 0
+  },
+  "selected_episode_files": [],
+  "train_episode_files": [],
+  "val_episode_files": [],
+  "counts_per_task": {
+    "metaworld-door-close": 0,
+    "metaworld-drawer-open": 0
+  },
+  "mix_ratios": {},
+  "total_trajectories": 0,
+  "default_trajectories_per_task": 0,
+  "num_train_pairs": 0,
+  "num_val_pairs": 0
+}

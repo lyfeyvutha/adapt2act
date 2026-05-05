@@ -1,0 +1,93 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+libEGL warning: failed to open /dev/dri/renderD135: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD135: Permission denied
+
+libEGL warning: failed to open /dev/dri/card8: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD134: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD134: Permission denied
+
+libEGL warning: failed to open /dev/dri/card7: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD133: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD133: Permission denied
+
+libEGL warning: failed to open /dev/dri/card6: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD132: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD132: Permission denied
+
+libEGL warning: failed to open /dev/dri/card5: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD131: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD131: Permission denied
+
+libEGL warning: failed to open /dev/dri/card4: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD130: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD130: Permission denied
+
+libEGL warning: failed to open /dev/dri/card3: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD129: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD129: Permission denied
+
+libEGL warning: failed to open /dev/dri/card2: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD128: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD128: Permission denied
+
+libEGL warning: failed to open /dev/dri/card1: Permission denied
+
+
+Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]
+Loading pipeline components...:  29%|██▊       | 2/7 [00:02<00:05,  1.01s/it]
+Loading pipeline components...:  57%|█████▋    | 4/7 [00:03<00:02,  1.40it/s]
+Loading pipeline components...:  71%|███████▏  | 5/7 [00:03<00:01,  1.83it/s]
+Loading pipeline components...:  86%|████████▌ | 6/7 [00:03<00:00,  2.18it/s]
+Loading pipeline components...: 100%|██████████| 7/7 [00:03<00:00,  2.06it/s]
+Loading pipeline components...: 100%|██████████| 7/7 [00:03<00:00,  1.76it/s]
+The config attributes {'addition_embed_type': None, 'addition_embed_type_num_heads': 64, 'addition_time_embed_dim': None, 'class_embed_type': None, 'encoder_hid_dim': None, 'encoder_hid_dim_type': None, 'num_class_embeds': None, 'projection_class_embeddings_input_dim': None} were passed to SparseControlNetModel, but are not expected and will be ignored. Please verify your config.json configuration file.
+libEGL warning: failed to open /dev/dri/renderD135: Permission denied
+
+libEGL warning: failed to open /dev/dri/renderD135: Permission denied
+
+libEGL warning: failed to open /dev/dri/card8: Permission denied
+
+Traceback (most recent call last):
+  File "/home/cvutha/adapt2act/src/visual_planning.py", line 185, in <module>
+    rollout(parse_cfg(Path().cwd() / __CONFIG__))
+  File "/home/cvutha/adapt2act/src/visual_planning.py", line 104, in rollout
+    rendered = torch.Tensor(env.render(**render_kwargs).copy()[np.newaxis, ...] / 255.0).permute(0,3,1,2).to(device)
+  File "/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/gym/core.py", line 58, in render
+    return render_func(self, *args, **kwargs)
+  File "/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/gym/core.py", line 421, in render
+    return self.env.render(*args, **kwargs)
+  File "/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/gym/core.py", line 58, in render
+    return render_func(self, *args, **kwargs)
+  File "/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/gym/core.py", line 421, in render
+    return self.env.render(*args, **kwargs)
+  File "/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/gym/core.py", line 58, in render
+    return render_func(self, *args, **kwargs)
+  File "/cs/home/cvutha/adapt2act/src/env.py", line 46, in render
+    return self.env.render(
+  File "/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/gym/core.py", line 58, in render
+    return render_func(self, *args, **kwargs)
+  File "/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/metaworld/envs/mujoco/mujoco_env.py", line 133, in render
+    return self.sim.render(
+  File "mjsim.pyx", line 156, in mujoco_py.cymj.MjSim.render
+  File "mjsim.pyx", line 158, in mujoco_py.cymj.MjSim.render
+  File "mjrendercontext.pyx", line 46, in mujoco_py.cymj.MjRenderContext.__init__
+  File "mjrendercontext.pyx", line 114, in mujoco_py.cymj.MjRenderContext._setup_opengl_context
+  File "opengl_context.pyx", line 130, in mujoco_py.cymj.OffscreenOpenGLContext.__init__
+RuntimeError: Failed to initialize OpenGL

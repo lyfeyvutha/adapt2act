@@ -1,0 +1,244 @@
+checkpoint,seed,return_code,avg_episode_reward,avg_success_rate,parsed_result,stdout_log,stderr_log,command_log,stdout_tail,stderr_tail
+checkpoints/idm/milestone3_siglip/idm_mw_equal_50_50_siglip_seed0_best.ckpt,0,1,nan,nan,False,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_siglip_run_logs/idm_mw_equal_50_50_siglip_seed0_best_seed0.stdout.log,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_siglip_run_logs/idm_mw_equal_50_50_siglip_seed0_best_seed0.stderr.log,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_siglip_run_logs/idm_mw_equal_50_50_siglip_seed0_best_seed0.command.txt,"[INFO] loading animatediff...
+[INFO] loaded animatediff!
+[INFO] loading in-domain checkpoint...
+loading from version 0.0
+[INFO] loaded in-domain checkpoint!
+[INFO] loading inverse dynamics model checkpoint...
+[INFO] loaded inverse dynamics model checkpoint!
+Found 8 GPUs for rendering. Using device 2.
+","
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/diffusers/models/attention.py"", line 530, in forward
+    ff_output = self.ff(norm_hidden_states)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/diffusers/models/attention.py"", line 1166, in forward
+    hidden_states = module(hidden_states)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/diffusers/models/activations.py"", line 123, in forward
+    return hidden_states * self.gelu(gate)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 180.00 MiB. GPU 0 has a total capacity of 10.57 GiB of which 172.75 MiB is free. Including non-PyTorch memory, this process has 10.40 GiB memory in use. Of the allocated memory 9.36 GiB is allocated by PyTorch, and 650.53 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+"
+checkpoints/idm/milestone3_siglip/idm_mw_equal_50_50_siglip_seed0_best.ckpt,1,1,nan,nan,False,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_siglip_run_logs/idm_mw_equal_50_50_siglip_seed0_best_seed1.stdout.log,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_siglip_run_logs/idm_mw_equal_50_50_siglip_seed0_best_seed1.stderr.log,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_siglip_run_logs/idm_mw_equal_50_50_siglip_seed0_best_seed1.command.txt,"[INFO] loading animatediff...
+[INFO] loaded animatediff!
+[INFO] loading in-domain checkpoint...
+loading from version 0.0
+[INFO] loaded in-domain checkpoint!
+[INFO] loading inverse dynamics model checkpoint...
+[INFO] loaded inverse dynamics model checkpoint!
+Found 8 GPUs for rendering. Using device 2.
+","
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/diffusers/models/attention.py"", line 530, in forward
+    ff_output = self.ff(norm_hidden_states)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/diffusers/models/attention.py"", line 1166, in forward
+    hidden_states = module(hidden_states)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/diffusers/models/activations.py"", line 123, in forward
+    return hidden_states * self.gelu(gate)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 180.00 MiB. GPU 0 has a total capacity of 10.57 GiB of which 172.88 MiB is free. Including non-PyTorch memory, this process has 10.40 GiB memory in use. Of the allocated memory 9.36 GiB is allocated by PyTorch, and 650.87 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+"
+checkpoints/idm/milestone3_siglip/idm_mw_equal_50_50_siglip_seed0_best.ckpt,2,1,nan,nan,False,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_siglip_run_logs/idm_mw_equal_50_50_siglip_seed0_best_seed2.stdout.log,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_siglip_run_logs/idm_mw_equal_50_50_siglip_seed0_best_seed2.stderr.log,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_siglip_run_logs/idm_mw_equal_50_50_siglip_seed0_best_seed2.command.txt,"[INFO] loading animatediff...
+[INFO] loaded animatediff!
+[INFO] loading in-domain checkpoint...
+loading from version 0.0
+[INFO] loaded in-domain checkpoint!
+[INFO] loading inverse dynamics model checkpoint...
+[INFO] loaded inverse dynamics model checkpoint!
+Found 8 GPUs for rendering. Using device 2.
+","
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/diffusers/models/attention.py"", line 530, in forward
+    ff_output = self.ff(norm_hidden_states)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/diffusers/models/attention.py"", line 1166, in forward
+    hidden_states = module(hidden_states)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/diffusers/models/activations.py"", line 123, in forward
+    return hidden_states * self.gelu(gate)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 180.00 MiB. GPU 0 has a total capacity of 10.57 GiB of which 170.75 MiB is free. Including non-PyTorch memory, this process has 10.40 GiB memory in use. Of the allocated memory 9.36 GiB is allocated by PyTorch, and 654.21 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+"
+checkpoints/idm/milestone3_siglip/idm_mw_equal_50_50_siglip_seed1_best.ckpt,0,1,nan,nan,False,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_siglip_run_logs/idm_mw_equal_50_50_siglip_seed1_best_seed0.stdout.log,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_siglip_run_logs/idm_mw_equal_50_50_siglip_seed1_best_seed0.stderr.log,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_siglip_run_logs/idm_mw_equal_50_50_siglip_seed1_best_seed0.command.txt,"[INFO] loading animatediff...
+[INFO] loaded animatediff!
+[INFO] loading in-domain checkpoint...
+loading from version 0.0
+[INFO] loaded in-domain checkpoint!
+[INFO] loading inverse dynamics model checkpoint...
+[INFO] loaded inverse dynamics model checkpoint!
+Found 8 GPUs for rendering. Using device 2.
+","s)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/diffusers/models/attention.py"", line 530, in forward
+    ff_output = self.ff(norm_hidden_states)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/diffusers/models/attention.py"", line 1166, in forward
+    hidden_states = module(hidden_states)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/diffusers/models/activations.py"", line 123, in forward
+    return hidden_states * self.gelu(gate)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 180.00 MiB. GPU 0 has a total capacity of 10.57 GiB of which 2.75 MiB is free. Including non-PyTorch memory, this process has 10.56 GiB memory in use. Of the allocated memory 9.51 GiB is allocated by PyTorch, and 669.91 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+"
+checkpoints/idm/milestone3_siglip/idm_mw_equal_50_50_siglip_seed1_best.ckpt,1,1,nan,nan,False,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_siglip_run_logs/idm_mw_equal_50_50_siglip_seed1_best_seed1.stdout.log,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_siglip_run_logs/idm_mw_equal_50_50_siglip_seed1_best_seed1.stderr.log,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_siglip_run_logs/idm_mw_equal_50_50_siglip_seed1_best_seed1.command.txt,"[INFO] loading animatediff...
+[INFO] loaded animatediff!
+[INFO] loading in-domain checkpoint...
+loading from version 0.0
+[INFO] loaded in-domain checkpoint!
+[INFO] loading inverse dynamics model checkpoint...
+[INFO] loaded inverse dynamics model checkpoint!
+Found 8 GPUs for rendering. Using device 2.
+","
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/diffusers/models/attention.py"", line 530, in forward
+    ff_output = self.ff(norm_hidden_states)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/diffusers/models/attention.py"", line 1166, in forward
+    hidden_states = module(hidden_states)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/diffusers/models/activations.py"", line 123, in forward
+    return hidden_states * self.gelu(gate)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 180.00 MiB. GPU 0 has a total capacity of 10.57 GiB of which 180.88 MiB is free. Including non-PyTorch memory, this process has 10.39 GiB memory in use. Of the allocated memory 9.36 GiB is allocated by PyTorch, and 643.30 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+"
+checkpoints/idm/milestone3_siglip/idm_mw_equal_50_50_siglip_seed1_best.ckpt,2,1,nan,nan,False,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_siglip_run_logs/idm_mw_equal_50_50_siglip_seed1_best_seed2.stdout.log,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_siglip_run_logs/idm_mw_equal_50_50_siglip_seed1_best_seed2.stderr.log,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_siglip_run_logs/idm_mw_equal_50_50_siglip_seed1_best_seed2.command.txt,"[INFO] loading animatediff...
+[INFO] loaded animatediff!
+[INFO] loading in-domain checkpoint...
+loading from version 0.0
+[INFO] loaded in-domain checkpoint!
+[INFO] loading inverse dynamics model checkpoint...
+[INFO] loaded inverse dynamics model checkpoint!
+Found 8 GPUs for rendering. Using device 2.
+","
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/diffusers/models/attention.py"", line 530, in forward
+    ff_output = self.ff(norm_hidden_states)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/diffusers/models/attention.py"", line 1166, in forward
+    hidden_states = module(hidden_states)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/diffusers/models/activations.py"", line 123, in forward
+    return hidden_states * self.gelu(gate)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 180.00 MiB. GPU 0 has a total capacity of 10.57 GiB of which 122.88 MiB is free. Including non-PyTorch memory, this process has 10.44 GiB memory in use. Of the allocated memory 9.41 GiB is allocated by PyTorch, and 652.84 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+"
+checkpoints/idm/milestone3_siglip/idm_mw_equal_50_50_siglip_seed2_best.ckpt,0,1,nan,nan,False,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_siglip_run_logs/idm_mw_equal_50_50_siglip_seed2_best_seed0.stdout.log,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_siglip_run_logs/idm_mw_equal_50_50_siglip_seed2_best_seed0.stderr.log,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_siglip_run_logs/idm_mw_equal_50_50_siglip_seed2_best_seed0.command.txt,"[INFO] loading animatediff...
+[INFO] loaded animatediff!
+[INFO] loading in-domain checkpoint...
+loading from version 0.0
+[INFO] loaded in-domain checkpoint!
+[INFO] loading inverse dynamics model checkpoint...
+[INFO] loaded inverse dynamics model checkpoint!
+Found 8 GPUs for rendering. Using device 2.
+","
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/diffusers/models/attention.py"", line 530, in forward
+    ff_output = self.ff(norm_hidden_states)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/diffusers/models/attention.py"", line 1166, in forward
+    hidden_states = module(hidden_states)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/diffusers/models/activations.py"", line 123, in forward
+    return hidden_states * self.gelu(gate)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 180.00 MiB. GPU 0 has a total capacity of 10.57 GiB of which 118.75 MiB is free. Including non-PyTorch memory, this process has 10.45 GiB memory in use. Of the allocated memory 9.41 GiB is allocated by PyTorch, and 657.09 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+"
+checkpoints/idm/milestone3_siglip/idm_mw_equal_50_50_siglip_seed2_best.ckpt,1,1,nan,nan,False,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_siglip_run_logs/idm_mw_equal_50_50_siglip_seed2_best_seed1.stdout.log,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_siglip_run_logs/idm_mw_equal_50_50_siglip_seed2_best_seed1.stderr.log,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_siglip_run_logs/idm_mw_equal_50_50_siglip_seed2_best_seed1.command.txt,"[INFO] loading animatediff...
+[INFO] loaded animatediff!
+[INFO] loading in-domain checkpoint...
+loading from version 0.0
+[INFO] loaded in-domain checkpoint!
+[INFO] loading inverse dynamics model checkpoint...
+[INFO] loaded inverse dynamics model checkpoint!
+Found 8 GPUs for rendering. Using device 2.
+","
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/diffusers/models/attention.py"", line 530, in forward
+    ff_output = self.ff(norm_hidden_states)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/diffusers/models/attention.py"", line 1166, in forward
+    hidden_states = module(hidden_states)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/diffusers/models/activations.py"", line 123, in forward
+    return hidden_states * self.gelu(gate)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 180.00 MiB. GPU 0 has a total capacity of 10.57 GiB of which 140.88 MiB is free. Including non-PyTorch memory, this process has 10.43 GiB memory in use. Of the allocated memory 9.41 GiB is allocated by PyTorch, and 631.61 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+"
+checkpoints/idm/milestone3_siglip/idm_mw_equal_50_50_siglip_seed2_best.ckpt,2,1,nan,nan,False,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_siglip_run_logs/idm_mw_equal_50_50_siglip_seed2_best_seed2.stdout.log,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_siglip_run_logs/idm_mw_equal_50_50_siglip_seed2_best_seed2.stderr.log,/cs/data/people/cvutha/idm_eval/milestone3_mw_equal_50_50_siglip_run_logs/idm_mw_equal_50_50_siglip_seed2_best_seed2.command.txt,"[INFO] loading animatediff...
+[INFO] loaded animatediff!
+[INFO] loading in-domain checkpoint...
+loading from version 0.0
+[INFO] loaded in-domain checkpoint!
+[INFO] loading inverse dynamics model checkpoint...
+[INFO] loaded inverse dynamics model checkpoint!
+Found 8 GPUs for rendering. Using device 2.
+",")
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/diffusers/models/attention.py"", line 530, in forward
+    ff_output = self.ff(norm_hidden_states)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/diffusers/models/attention.py"", line 1166, in forward
+    hidden_states = module(hidden_states)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/torch/nn/modules/module.py"", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File ""/home/cvutha/opt/miniconda3/envs/adapt2act/lib/python3.10/site-packages/diffusers/models/activations.py"", line 123, in forward
+    return hidden_states * self.gelu(gate)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 180.00 MiB. GPU 0 has a total capacity of 10.57 GiB of which 16.88 MiB is free. Including non-PyTorch memory, this process has 10.55 GiB memory in use. Of the allocated memory 9.53 GiB is allocated by PyTorch, and 639.42 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+"

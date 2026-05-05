@@ -1,0 +1,14 @@
+{
+  "seed": 1,
+  "policy_source": "expert",
+  "goal_mode": "hidden",
+  "tasks": {
+    "metaworld-drawer-open": {
+      "requested_episodes": 100,
+      "written_episodes": 100,
+      "success_episodes": 100,
+      "success_rate_written": 1.0,
+      "output_dir": "/cs/data/people/cvutha/idm_data/raw/metaworld-drawer-open/expert/seed1/episodes"
+    }
+  }
+}
