@@ -16,7 +16,8 @@ from env import make_env
 torch.backends.cudnn.benchmark = True
 __CONFIG__, __LOGS__ = 'cfgs', 'logs'
 
-from utils import set_seed, probadap_sampling, InvDynamics
+from feature_extractor import InvDynamics, parse_embeddings
+from utils import set_seed, probadap_sampling
 
 from omegaconf import OmegaConf
 from termcolor import colored
@@ -56,13 +57,19 @@ def rollout(cfg):
         guidance = AnimateDiff(device)
         animatediff_pipe = guidance.pipe
 
-    #instantiate inv_model
-    inv_model = InvDynamics()
-    inv_model = inv_model.to(device)
-
     # load inv_model checkpoint weights
     print('[INFO] loading inverse dynamics model checkpoint...')
     inv_checkpoint = torch.load(cfg.inv_ckpt_path, map_location="cpu")
+    ckpt_args = inv_checkpoint.get("args", {})
+    ckpt_metadata = inv_checkpoint.get("idm_metadata", {})
+    embeddings = ckpt_metadata.get("embeddings", ckpt_args.get("embeddings", cfg.get("idm_embeddings", "vc-1")))
+    embeddings = parse_embeddings(embeddings)
+    state_dict = inv_checkpoint["inv_model"]
+    action_dim = state_dict["inv_model.weight"].shape[0] if "inv_model.weight" in state_dict else 4
+
+    # instantiate inv_model with the same frozen representation stack used for training
+    inv_model = InvDynamics(action_dim=action_dim, embeddings=embeddings)
+    inv_model = inv_model.to(device)
     m, u  = inv_model.load_state_dict(inv_checkpoint['inv_model'], strict=False)
     print('[INFO] loaded inverse dynamics model checkpoint!')
 

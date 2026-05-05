@@ -8,22 +8,44 @@ import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader, Dataset
 
-from utils import InvDynamics, set_seed
+from feature_extractor import InvDynamics, parse_embeddings
+
+
+def set_seed(seed: int):
+    import random
+
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
 
 
 class PairDataset(Dataset):
     def __init__(self, npz_path: Path):
         data = np.load(npz_path, allow_pickle=False)
-        self.frame_t = data["frame_t"]  # [N, H, W, 3], uint8
-        self.frame_tp1 = data["frame_tp1"]  # [N, H, W, 3], uint8
+        self.uses_features = "features_t" in data and "features_tp1" in data
+        if self.uses_features:
+            self.features_t = data["features_t"].astype(np.float32)  # [N, D]
+            self.features_tp1 = data["features_tp1"].astype(np.float32)  # [N, D]
+            self.feature_dim = int(self.features_t.shape[-1])
+        else:
+            self.frame_t = data["frame_t"]  # [N, H, W, 3], uint8
+            self.frame_tp1 = data["frame_tp1"]  # [N, H, W, 3], uint8
+            self.feature_dim = None
         self.actions = data["actions"].astype(np.float32)  # [N, A]
-        if len(self.frame_t) != len(self.actions):
+        first_len = len(self.features_t) if self.uses_features else len(self.frame_t)
+        if first_len != len(self.actions):
             raise ValueError(f"Mismatched data lengths in {npz_path}")
 
     def __len__(self):
         return len(self.actions)
 
     def __getitem__(self, idx):
+        if self.uses_features:
+            f0 = torch.from_numpy(self.features_t[idx])
+            f1 = torch.from_numpy(self.features_tp1[idx])
+            return torch.stack([f0, f1], dim=0), torch.from_numpy(self.actions[idx])
+
         # Convert to [2, 3, H, W] in [0, 1] range.
         f0 = torch.from_numpy(self.frame_t[idx]).permute(2, 0, 1).float() / 255.0
         f1 = torch.from_numpy(self.frame_tp1[idx]).permute(2, 0, 1).float() / 255.0
@@ -47,7 +69,15 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--grad-clip", type=float, default=1.0)
     parser.add_argument("--num-workers", type=int, default=4)
     parser.add_argument("--device", type=str, default="cuda")
-    parser.add_argument("--output-root", type=str, default="checkpoints/idm")
+    parser.add_argument("--output-root", type=str, default="/cs/data/people/cvutha/checkpoints/idm")
+    parser.add_argument("--embeddings", type=str, default="vc-1", help="Comma-separated: vc-1,dino-v3,dino-v2,siglip,vgg-t")
+    parser.add_argument(
+        "--input-mode",
+        type=str,
+        default="auto",
+        choices=["auto", "images", "features"],
+        help="Use raw image pairs, precomputed feature pairs, or infer from train.npz.",
+    )
     return parser.parse_args()
 
 
@@ -70,12 +100,18 @@ def evaluate(model: InvDynamics, loader: DataLoader, device: torch.device) -> fl
 
 
 def save_ckpt(path: Path, model: InvDynamics, optimizer: torch.optim.Optimizer, step: int, metrics: Dict, args: argparse.Namespace):
+    state_dict_fn = getattr(model, "trainable_state_dict", None)
     payload = {
-        "inv_model": model.state_dict(),
+        "inv_model": state_dict_fn() if state_dict_fn is not None else model.state_dict(),
         "optimizer": optimizer.state_dict(),
         "step": step,
         "metrics": metrics,
         "args": vars(args),
+        "idm_metadata": {
+            "embeddings": getattr(model, "embeddings", ["vc-1"]),
+            "feature_dim": getattr(model, "embd_size", None),
+            "action_dim": getattr(model, "action_dim", None),
+        },
     }
     path.parent.mkdir(parents=True, exist_ok=True)
     torch.save(payload, path)
@@ -96,6 +132,13 @@ def main():
     val_ds = PairDataset(val_path)
     if len(train_ds) == 0:
         raise ValueError("Training set is empty")
+    if train_ds.uses_features != val_ds.uses_features:
+        raise ValueError("Train and val splits must both use images or both use precomputed features")
+
+    inferred_mode = "features" if train_ds.uses_features else "images"
+    input_mode = inferred_mode if args.input_mode == "auto" else args.input_mode
+    if input_mode != inferred_mode:
+        raise ValueError(f"--input-mode={args.input_mode} does not match dataset format ({inferred_mode})")
 
     train_loader = DataLoader(
         train_ds,
@@ -109,19 +152,31 @@ def main():
         val_ds,
         batch_size=args.val_batch_size,
         shuffle=False,
-        num_workers=max(1, args.num_workers // 2),
+        num_workers=0 if args.num_workers == 0 else max(1, args.num_workers // 2),
         pin_memory=(device.type == "cuda"),
         drop_last=False,
     )
     train_iter = cycle(train_loader)
 
-    model = InvDynamics(action_dim=train_ds.actions.shape[-1]).to(device)
-    optimizer = torch.optim.Adam(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
+    embeddings = parse_embeddings(args.embeddings)
+    model = InvDynamics(
+        action_dim=train_ds.actions.shape[-1],
+        embeddings=embeddings,
+        feature_dim=train_ds.feature_dim,
+        build_encoders=(input_mode == "images"),
+    ).to(device)
+    optimizer = torch.optim.Adam(
+        [p for p in model.parameters() if p.requires_grad],
+        lr=args.lr,
+        weight_decay=args.weight_decay,
+    )
 
     dataset_name = dataset_dir.name
     run_name = f"idm_{dataset_name}_seed{args.seed}"
     out_dir = Path(args.output_root) / args.experiment_name
     out_dir.mkdir(parents=True, exist_ok=True)
+    print(f"[train_idm] output_dir={out_dir}")
+    print(f"[train_idm] input_mode={input_mode} embeddings={embeddings} feature_dim={model.embd_size}")
 
     best_val = float("inf")
     history = []
