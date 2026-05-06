@@ -5,4 +5,8 @@ loading from version 0.0
 [INFO] loaded in-domain checkpoint!
 [INFO] loading inverse dynamics model checkpoint...
 [INFO] loaded inverse dynamics model checkpoint!
-Found 8 GPUs for rendering. Using device 2.
+Rollout 0 completed successfully
+Rollout 1 completed successfully
+Rollout 2 completed successfully
+[RESULT] avg_episode_reward=1864.795814 avg_success_rate=0.000000
+Found 8 GPUs for rendering. Using device 1.

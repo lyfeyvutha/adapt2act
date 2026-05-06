@@ -8,5 +8,5 @@ loading from version 0.0
 Rollout 0 completed successfully
 Rollout 1 completed successfully
 Rollout 2 completed successfully
-[RESULT] avg_episode_reward=1948.530502 avg_success_rate=0.000000
-Found 8 GPUs for rendering. Using device 0.
+[RESULT] avg_episode_reward=1816.025793 avg_success_rate=0.000000
+Found 8 GPUs for rendering. Using device 4.
